@@ -146,7 +146,7 @@
      ```
    - Log in as administrator
      ```sh
-     $ oc login -u kubeadmin -p (password) https://api.crc.testing:6   443
+     $ oc login -u kubeadmin -p (password) https://api.crc.testing:6443
      ```
 1. Now, you can run oc command ;-)
    ```sh
