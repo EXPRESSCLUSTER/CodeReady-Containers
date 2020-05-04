@@ -1,5 +1,6 @@
 # Deploy Applications
 - [Prerequisite](#prerequisite)
+- [Hello OpenShift](#hello-openshift)
 
 ## Prerequisite
 1. Log in CRC.
