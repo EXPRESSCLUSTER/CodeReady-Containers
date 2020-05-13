@@ -15,7 +15,7 @@
      ```
 1. Create a project.
    ```sh
-   $ oc project test
+   $ oc new-project test
    ```
 ## Hello OpenShift 
 1. Dowonload [hello-pod.json](https://github.com/openshift/origin/blob/master/examples/hello-openshift/hello-pod.json) file.
@@ -43,24 +43,27 @@
    Hello OpenShift!
    ```
 ### SingleServerSafe 
-1. Log in CRC with kubeadmin user.
+1. Create ServiceAccount.
    ```sh
-   $ oc login -u kubeadmin -p (password) https://api.crc.testing:6443
+   $ oc create sa with-anyuid
    ```
-1. Create a project to run SingleServerSafe container with root account.
+1. Set anyuid as system:admin.
    ```sh
-   $ oc project root-test
-   ```
-1. Set anyuid to the project.
-   ```sh
-   $ oc adm policy add-scc-to-user anyuid -z default -n root-test
-   ```
-1. Log in CRC with developer user.
-   ```sh
-   $ oc login -u developer -p developer https://api.crc.testing:6443
+   $ oc adm policy add-scc-to-user anyuid -z with-anyuid --as system:admin
    ```
 1. Refer to th following page to deploy SingleSeverSafe.
    - https://github.com/EXPRESSCLUSTER/kubernetes/blob/master/HowToDeploySSS.md
+     - Add the following lines to run a pod with root account.
+       ```yaml
+        :
+           spec:
+             shareProcessNamespace: true
+             restartPolicy: Always
+             serviceAccount: with-anyuid
+             serviceAccountName: with-anyuid
+             containers:       
+        :
+       ```
      - There are sample yaml files on the above page to create three replicas. Please modify the following line and apply it.
        ```yaml
          replicas: 1
