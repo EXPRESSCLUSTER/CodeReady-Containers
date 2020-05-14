@@ -53,6 +53,7 @@
    ```
 1. Refer to th following page to deploy SingleSeverSafe.
    - https://github.com/EXPRESSCLUSTER/kubernetes/blob/master/HowToDeploySSS.md
+     - Use oc command instead of kubectl.
      - Add the following lines to run a pod with root account.
        ```yaml
         :

@@ -13,7 +13,29 @@
   - For more detail, please refer to [Hardware requirements](https://code-ready.github.io/crc/#minimum-system-requirements-hardware_gsg).
 
 ## Evaluation Environment
-- I have used KVM for evaluation.
+- CRC 1.10.0
+  ```
+  +----------------------------------------------------+
+  | Host OS                                            |
+  | - CentOS Linux release 7.8.2003 (Core)             |
+  | - KVM (virsh version)                              |
+  |   - Compiled against library: libvirt 4.5.0        |
+  |   - Using library: libvirt 4.5.0                   |
+  |   - Using API: QEMU 4.5.0                          |
+  |   - Running hypervisor: QEMU 2.12.0                |
+  | +------------------------------------------------+ |
+  | | Guest OS                                       | |
+  | | - CRC (crc version)                            | |
+  | |   - crc version: 1.10.0+9025021                | |
+  | |   - OpenShift version: 4.4.3                   | |
+  | | - OpenShift (oc version)                       | | 
+  | |   - Client Version: 4.5.0-202004180718-6b061e3 | |
+  | |   - Server Version: 4.4.3                      | |
+  | |   - Kubernetes Version: v1.17.1                | |
+  | +------------------------------------------------+ |
+  +----------------------------------------------------+
+  ```
+- CRC 1.9.0
   ```
   +----------------------------------------------------+
   | Host OS                                            |
