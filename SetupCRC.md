@@ -13,6 +13,28 @@
   - For more detail, please refer to [Hardware requirements](https://code-ready.github.io/crc/#minimum-system-requirements-hardware_gsg).
 
 ## Evaluation Environment
+- CRC 1.18.0
+  ```
+  +----------------------------------------------------+
+  | Host OS                                            |
+  | - CentOS Linux release 7.9.2009 (Core)             |
+  | - KVM (virsh version)                              |
+  |   - Compiled against library: libvirt 4.5.0        |
+  |   - Using library: libvirt 4.5.0                   |
+  |   - Using API: QEMU 4.5.0                          |
+  |   - Running hypervisor: QEMU 2.12.0                |
+  | +------------------------------------------------+ |
+  | | Guest OS                                       | |
+  | | - CRC (crc version)                            | |
+  | |   - crc version: 1.18.0+bb304aa                | |
+  | |   - OpenShift version: 4.6.1                   | |
+  | | - OpenShift (oc version)                       | | 
+  | |   - Client Version: 4.6.1                      | |
+  | |   - Server Version: 4.6.1                      | |
+  | |   - Kubernetes Version: v1.19.0+d59ce34        | |
+  | +------------------------------------------------+ |
+  +----------------------------------------------------+
+  ```
 - CRC 1.10.0
   ```
   +----------------------------------------------------+
@@ -67,6 +89,10 @@
 1. Switch to the sudoer user.
    ```sh
    # su <user name>
+   ```
+1. Run the following command to run virsh command with sudoer user.
+   ```sh
+   $ export LIBVIRT_DEFAULT_URI="qemu:///system"
    ```
 1. Log in Red Hat and download CRC binary file (e.g. crc-linux-amd64.tar.xz).
 1. Expand the archive file.
@@ -219,3 +245,6 @@
    docker.io   docker.io/expresscluster/sss4postgres          EXPRESSCLUSTER X SingleServerSafe container ...   0
     :
    ```
+## Link
+- Archives
+  - https://mirror.openshift.com/pub/openshift-v4/clients/crc/
