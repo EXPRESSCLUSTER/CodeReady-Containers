@@ -1,6 +1,12 @@
 # Setup CodeReady Containers with KVM behind the Proxy Server
 - The official documentation is [here](https://code-ready.github.io/crc/).
 
+## Index
+- [Prerequisite](#prerequisite)
+- [Evaluation Environment](#evaluation-environment)
+- [Setup CRC](#setup-CRC)
+- [Link](#link)
+
 ## Prerequisite
 - You need Red Hat account to get the binary file of CRC. You can create an account for free.
 - On the download page, copy pull secret in advance. The pull secret is needed to
@@ -230,7 +236,7 @@
         ```sh
         export HTTP_PROXY=http://example.proxy.com:<port>
         export HTTPS_PROXY=http://example.proxy.com:<port>
-        export NO_PROXY=127.0.01,192.168.130.1,.testing
+        export NO_PROXY=127.0.0.1,192.168.130.11,.testing
         ```
 1. Restart the CRC VM.
    ```sh
