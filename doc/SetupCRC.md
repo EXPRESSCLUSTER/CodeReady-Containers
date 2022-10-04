@@ -1,4 +1,4 @@
-# Setup CodeReady Containers with KVM behind the Proxy Server
+# Setup CodeReady Containers with KVM behind Proxy Server
 - The official documentation is [here](https://code-ready.github.io/crc/).
 
 ## Index
@@ -8,8 +8,8 @@
 - [Link](#link)
 
 ## Prerequisite
-- You need Red Hat account to get the binary file of CRC. You can create an account for free.
-- On the download page, copy pull secret in advance. The pull secret is needed to
+- You need Red Hat account to get the binary file of CodeReady Containers (CRC). You can create an account for free.
+- On the download page, copy pull secret in advance. The pull secret is needed to start CRC.
 - CRC needs about 9 GB RAM.
   ```sh
   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
@@ -19,94 +19,94 @@
   - For more detail, please refer to [Hardware requirements](https://code-ready.github.io/crc/#minimum-system-requirements-hardware_gsg).
 
 ## Evaluation Environment
-- CRC 1.20.0
-  ```
-  +----------------------------------------------------+
-  | Host OS                                            |
-  | - CentOS Linux release 7.9.2009 (Core)             |
-  | - KVM (virsh version)                              |
-  |   - Compiled against library: libvirt 4.5.0        |
-  |   - Using library: libvirt 4.5.0                   |
-  |   - Using API: QEMU 4.5.0                          |
-  |   - Running hypervisor: QEMU 2.12.0                |
-  | +------------------------------------------------+ |
-  | | Guest OS                                       | |
-  | | - CRC (crc version)                            | |
-  | |   - crc version: 1.20.0+ef3f80d                | |
-  | |   - OpenShift version: 4.6.6                   | |
-  | | - OpenShift (oc version)                       | | 
-  | |   - Client Version: 4.6.6                      | |
-  | |   - Server Version: 4.6.6                      | |
-  | |   - Kubernetes Version: v1.19.0+43983cd        | |
-  | +------------------------------------------------+ |
-  +----------------------------------------------------+
-  ```
-- CRC 1.18.0
-  ```
-  +----------------------------------------------------+
-  | Host OS                                            |
-  | - CentOS Linux release 7.9.2009 (Core)             |
-  | - KVM (virsh version)                              |
-  |   - Compiled against library: libvirt 4.5.0        |
-  |   - Using library: libvirt 4.5.0                   |
-  |   - Using API: QEMU 4.5.0                          |
-  |   - Running hypervisor: QEMU 2.12.0                |
-  | +------------------------------------------------+ |
-  | | Guest OS                                       | |
-  | | - CRC (crc version)                            | |
-  | |   - crc version: 1.18.0+bb304aa                | |
-  | |   - OpenShift version: 4.6.1                   | |
-  | | - OpenShift (oc version)                       | | 
-  | |   - Client Version: 4.6.1                      | |
-  | |   - Server Version: 4.6.1                      | |
-  | |   - Kubernetes Version: v1.19.0+d59ce34        | |
-  | +------------------------------------------------+ |
-  +----------------------------------------------------+
-  ```
-- CRC 1.10.0
-  ```
-  +----------------------------------------------------+
-  | Host OS                                            |
-  | - CentOS Linux release 7.8.2003 (Core)             |
-  | - KVM (virsh version)                              |
-  |   - Compiled against library: libvirt 4.5.0        |
-  |   - Using library: libvirt 4.5.0                   |
-  |   - Using API: QEMU 4.5.0                          |
-  |   - Running hypervisor: QEMU 2.12.0                |
-  | +------------------------------------------------+ |
-  | | Guest OS                                       | |
-  | | - CRC (crc version)                            | |
-  | |   - crc version: 1.10.0+9025021                | |
-  | |   - OpenShift version: 4.4.3                   | |
-  | | - OpenShift (oc version)                       | | 
-  | |   - Client Version: 4.5.0-202004180718-6b061e3 | |
-  | |   - Server Version: 4.4.3                      | |
-  | |   - Kubernetes Version: v1.17.1                | |
-  | +------------------------------------------------+ |
-  +----------------------------------------------------+
-  ```
-- CRC 1.9.0
-  ```
-  +----------------------------------------------------+
-  | Host OS                                            |
-  | - CentOS Linux release 7.8.2003 (Core)             |
-  | - KVM (virsh version)                              |
-  |   - Compiled against library: libvirt 4.5.0        |
-  |   - Using library: libvirt 4.5.0                   |
-  |   - Using API: QEMU 4.5.0                          |
-  |   - Running hypervisor: QEMU 2.12.0                |
-  | +------------------------------------------------+ |
-  | | Guest OS                                       | |
-  | | - CRC (crc version)                            | |
-  | |   - crc version: 1.9.0+a68b5e0                 | |
-  | |   - OpenShift version: 4.3.10                  | |
-  | | - OpenShift (oc version)                       | | 
-  | |   - Client Version: 4.5.0-202004180718-6b061e3 | |
-  | |   - Server Version: 4.3.10                     | |
-  | |   - Kubernetes Version: v1.16.2                | |
-  | +------------------------------------------------+ |
-  +----------------------------------------------------+
-  ```
+### CRC 1.20.0
+```
++----------------------------------------------------+
+| Host OS                                            |
+| - CentOS Linux release 7.9.2009 (Core)             |
+| - KVM (virsh version)                              |
+|   - Compiled against library: libvirt 4.5.0        |
+|   - Using library: libvirt 4.5.0                   |
+|   - Using API: QEMU 4.5.0                          |
+|   - Running hypervisor: QEMU 2.12.0                |
+| +------------------------------------------------+ |
+| | Guest OS                                       | |
+| | - CRC (crc version)                            | |
+| |   - crc version: 1.20.0+ef3f80d                | |
+| |   - OpenShift version: 4.6.6                   | |
+| | - OpenShift (oc version)                       | | 
+| |   - Client Version: 4.6.6                      | |
+| |   - Server Version: 4.6.6                      | |
+| |   - Kubernetes Version: v1.19.0+43983cd        | |
+| +------------------------------------------------+ |
++----------------------------------------------------+
+```
+### CRC 1.18.0
+```
++----------------------------------------------------+
+| Host OS                                            |
+| - CentOS Linux release 7.9.2009 (Core)             |
+| - KVM (virsh version)                              |
+|   - Compiled against library: libvirt 4.5.0        |
+|   - Using library: libvirt 4.5.0                   |
+|   - Using API: QEMU 4.5.0                          |
+|   - Running hypervisor: QEMU 2.12.0                |
+| +------------------------------------------------+ |
+| | Guest OS                                       | |
+| | - CRC (crc version)                            | |
+| |   - crc version: 1.18.0+bb304aa                | |
+| |   - OpenShift version: 4.6.1                   | |
+| | - OpenShift (oc version)                       | | 
+| |   - Client Version: 4.6.1                      | |
+| |   - Server Version: 4.6.1                      | |
+| |   - Kubernetes Version: v1.19.0+d59ce34        | |
+| +------------------------------------------------+ |
++----------------------------------------------------+
+```
+### CRC 1.10.0
+```
++----------------------------------------------------+
+| Host OS                                            |
+| - CentOS Linux release 7.8.2003 (Core)             |
+| - KVM (virsh version)                              |
+|   - Compiled against library: libvirt 4.5.0        |
+|   - Using library: libvirt 4.5.0                   |
+|   - Using API: QEMU 4.5.0                          |
+|   - Running hypervisor: QEMU 2.12.0                |
+| +------------------------------------------------+ |
+| | Guest OS                                       | |
+| | - CRC (crc version)                            | |
+| |   - crc version: 1.10.0+9025021                | |
+| |   - OpenShift version: 4.4.3                   | |
+| - OpenShift (oc version)                       | | 
+| |   - Client Version: 4.5.0-202004180718-6b061e3 | |
+| |   - Server Version: 4.4.3                      | |
+| |   - Kubernetes Version: v1.17.1                | |
+| +------------------------------------------------+ |
++----------------------------------------------------+
+```
+### CRC 1.9.0
+```
++----------------------------------------------------+
+| Host OS                                            |
+| - CentOS Linux release 7.8.2003 (Core)             |
+| - KVM (virsh version)                              |
+|   - Compiled against library: libvirt 4.5.0        |
+|   - Using library: libvirt 4.5.0                   |
+|   - Using API: QEMU 4.5.0                          |
+|   - Running hypervisor: QEMU 2.12.0                |
+| +------------------------------------------------+ |
+| | Guest OS                                       | |
+| | - CRC (crc version)                            | |
+| |   - crc version: 1.9.0+a68b5e0                 | |
+| |   - OpenShift version: 4.3.10                  | |
+| | - OpenShift (oc version)                       | | 
+| |   - Client Version: 4.5.0-202004180718-6b061e3 | |
+| |   - Server Version: 4.3.10                     | |
+| |   - Kubernetes Version: v1.16.2                | |
+| +------------------------------------------------+ |
++----------------------------------------------------+
+```
 
 ## Setup CRC
 1. Create a user and add it to the following groups.
