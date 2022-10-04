@@ -2,7 +2,7 @@
 - The purpose of this project to open knowledge for CodeReady Containers (CRC) and EXPRESSCLUSTER.
 
 ## Setup CodeReady Containers with KVM behind the Proxy Server
-- Refer to [setup steps](https://github.com/EXPRESSCLUSTER/CodeReady-Containers/blob/master/SetupCRC.md).
+- Refer to [setup steps](doc/SetupCRC.md).
 
 ## How to Depoly Application
-- Refer to [deploy steps](https://github.com/EXPRESSCLUSTER/CodeReady-Containers/blob/master/DeployApp.md).
+- Refer to [deploy steps](doc/DeployApp.md).
